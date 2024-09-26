@@ -10,7 +10,7 @@ namespace TelCo.ColorCoder
     /// wiring for telecommunications.
     /// This class provides the color coding and 
     /// mapping of pair number to color and color to pair number.
-    /// </summary>
+
     class Program
     {
         /// <summary>
