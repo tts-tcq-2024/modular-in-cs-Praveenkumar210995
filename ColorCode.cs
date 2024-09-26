@@ -3,7 +3,7 @@ namespace TelCo.ColorCoder
 {
     public class ColorCode : ColorMapping
     {
-        public ColorPair GetColorFromPairNumber(int PairNumber)
+        public PairColor GetColorFromPairNumber(int PairNumber)
         {
             int MajorColorsCount = MajorColorMapping.Length;
             int MinorColorsCount = MinorColorMapping.Length;
@@ -19,7 +19,7 @@ namespace TelCo.ColorCoder
             return Pair;
         }
 
-        public int GetPairNumberFromColor(ColorPair Pair)
+        public int GetPairNumberFromColor(PairColor Pair)
         {
             var GetColorIndex = new GetColorIndex();
             int MajorColorIndex = GetColorIndex.Major(Pair);
