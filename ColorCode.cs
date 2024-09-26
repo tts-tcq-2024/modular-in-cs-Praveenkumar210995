@@ -3,33 +3,33 @@ namespace TelCo.ColorCoder
 {
     public class ColorCode : ColorMapping
     {
-        public ColorPair GetColorFromPairNumber(int pairNumber)
+        public ColorPair GetColorFromPairNumber(int PairNumber)
         {
-            int majorColorsCount = majorColorMapping.Length;
-            int minorColorsCount = minorColorMapping.Length;
-            if (pairNumber < 1 || pairNumber > minorColorsCount * majorColorsCount)
+            int MajorColorsCount = MajorColorMapping.Length;
+            int MinorColorsCount = MinorColorMapping.Length;
+            if (PairNumber < 1 || PairNumber > MinorColorsCount * MajorColorsCount)
             {
                 throw new ArgumentOutOfRangeException(
-                    string.Format("Argument PairNumber:{0} is outside the allowed range", pairNumber));
+                    string.Format("Argument PairNumber:{0} is outside the allowed range", PairNumber));
             }
-            int zeroBasedPairNumber = pairNumber - 1;
-            int majorColorIndex = zeroBasedPairNumber / minorColorsCount;
-            int minorColorIndex = zeroBasedPairNumber % minorColorsCount;
-            ColorPair pair = new ColorPair() { majorColor = majorColorMapping[majorColorIndex], minorColor = minorColorMapping[minorColorIndex] };
-            return pair;
+            int ZeroBasedPairNumber = PairNumber - 1;
+            int MajorColorIndex = ZeroBasedPairNumber / MinorColorsCount;
+            int MinorColorIndex = ZeroBasedPairNumber % MinorColorsCount;
+            ColorPair Pair = new ColorPair() { MajorColor = MajorColorMapping[MajorColorIndex], MinorColor = MinorColorMapping[MinorColorIndex] };
+            return Pair;
         }
 
-        public int GetPairNumberFromColor(ColorPair pair)
+        public int GetPairNumberFromColor(ColorPair Pair)
         {
             var GetColorIndex = new GetColorIndex();
-            int majorColorIndex = GetColorIndex.Major(pair);
-            int minorColorIndex = GetColorIndex.Minor(pair);
-            if (majorColorIndex == -1 || minorColorIndex == -1)
+            int MajorColorIndex = GetColorIndex.Major(Pair);
+            int MinorColorIndex = GetColorIndex.Minor(Pair);
+            if (MajorColorIndex == -1 || MinorColorIndex == -1)
             {
                 throw new ArgumentException(
-                    string.Format("Unknown Colors: {0}", pair.ToString()));
+                    string.Format("Unknown Colors: {0}", Pair.ToString()));
             }
-            return (majorColorIndex * minorColorMapping.Length) + (minorColorIndex + 1);
+            return (MajorColorIndex * MinorColorMapping.Length) + (MinorColorIndex + 1);
         }
     }
 }
