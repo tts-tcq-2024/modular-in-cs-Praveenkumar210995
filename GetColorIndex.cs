@@ -20,7 +20,7 @@ namespace ColorCoding
                     break;
                 }
             }
-            return colorIndex;
+            return ColorIndex;
         }
 
         public int Minor(PairColor Pair)
@@ -34,7 +34,7 @@ namespace ColorCoding
                     break;
                 }
             }
-            return colorIndex;
+            return ColorIndex;
         }
     }
 }
