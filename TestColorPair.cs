@@ -19,7 +19,7 @@ namespace TelCo.ColorCoder
             TestPair1 = ColorCode.GetColorFromPairNumber(PairNumber);
             Console.WriteLine("[In]Pair Number: {0},[Out] Colors: {1}\n", PairNumber, TestPair1);
             Debug.Assert(TestPair1.MajorColor == Color.White);
-            Debug.Assert(TestPair1.MinorColor == Color.SlateGrey );
+            Debug.Assert(TestPair1.MinorColor == Color.SlateGray );
 
             PairNumber = 23;
             TestPair1 = ColorCode.GetColorFromPairNumber(PairNumber);
