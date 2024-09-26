@@ -28,13 +28,13 @@ namespace TelCo.ColorCoder
             Debug.Assert(TestPair1.MajorColor == Color.Violet);
             Debug.Assert(TestPair1.MinorColor == Color.Green);
 
-            PairColor TestPair2 = new ColorPair() { MajorColor = Color.Yellow, MinorColor = Color.Green };
-            PairNumber = ColorCode.GetPairNumberFromColor(testPair2);
+            PairColor TestPair2 = new PairColor() { MajorColor = Color.Yellow, MinorColor = Color.Green };
+            PairNumber = ColorCode.GetPairNumberFromColor(TestPair2);
             Console.WriteLine("[In]Colors: {0}, [Out] PairNumber: {1}\n", TestPair2, PairNumber);
             Debug.Assert(PairNumber == 18);
 
-            TestPair2 = new ColorPair() { MajorColor = Color.Red, MinorColor = Color.Blue };
-            PairNumber = ColorCode.GetPairNumberFromColor(testPair2);
+            TestPair2 = new PairColor() { MajorColor = Color.Red, MinorColor = Color.Blue };
+            PairNumber = ColorCode.GetPairNumberFromColor(TestPair2);
             Console.WriteLine("[In]Colors: {0}, [Out] PairNumber: {1}", TestPair2, PairNumber);
             Debug.Assert(PairNumber == 6);
         }
