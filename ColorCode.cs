@@ -1,4 +1,4 @@
-using modular_in_csharp;
+using ColorCoding;
 namespace TelCo.ColorCoder
 {
     public class ColorCode : ColorMapping
