@@ -1,7 +1,7 @@
 using ColorCoding;
 namespace TelCo.ColorCoder
 {
-    public class ColorCode
+    public class ColorCode : ColorMapping
     {
         public PairColor GetColorFromPairNumber(int PairNumber)
         {
